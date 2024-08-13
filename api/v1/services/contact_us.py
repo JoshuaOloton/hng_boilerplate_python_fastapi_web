@@ -16,7 +16,6 @@ class ContactUsService(Service):
             "email": "email",
             "title": "phone_number", # Adapting the schema to the model
             "message": "message",
-            "org_id": "org_id"
         }
         super().__init__()
 
@@ -29,7 +28,6 @@ class ContactUsService(Service):
             email=getattr(data, self.adabtingMapper["email"]),
             title=getattr(data, self.adabtingMapper["title"]),
             message=getattr(data, self.adabtingMapper["message"]),
-            org_id=getattr(data, self.adabtingMapper["org_id"]),
         )
         db.add(contact_message)
         db.commit()

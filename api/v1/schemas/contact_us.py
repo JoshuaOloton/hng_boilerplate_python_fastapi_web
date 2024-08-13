@@ -18,4 +18,3 @@ class CreateContactUs(BaseModel):
     email: EmailStr
     phone_number: str
     message: str
-    org_id: str
